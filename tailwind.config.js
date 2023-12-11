@@ -2,13 +2,14 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-     
+    extend: {
       colors: {
-        'olive': "#283618",
-        'lightish': "#606c38",
-        'off': "#fefae0",
+        olive: "#003e1f",
+        dulche: "#F5DA8F",
+        lightish: "#E3CC8C",
+        off: "#fefae0",
       },
-     
+    },
   },
   plugins: [],
 };
