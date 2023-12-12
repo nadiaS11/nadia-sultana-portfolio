@@ -28,7 +28,7 @@ const Contact = ( ) => {
 
 
   return (
-    <div className="max-w-3xl">
+    <div id="contact" className="max-w-3xl">
       <section className="mx-auto   md:rounded-md hover:md:border md:shadow-lg bg-off bg-opacity-5">
         <div className="grid grid-cols-4   ">
           <div className="col-span-4      px-8 py-10   md:col-span-2 md:border-r md:px-10 md:py-12  ">

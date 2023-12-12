@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types'; 
  import { FaFacebookF, FaGithub,   FaLinkedinIn  } from "react-icons/fa";
-import { MdEmail, MdHorizontalRule } from "react-icons/md";
+import { MdDownload, MdEmail, MdHorizontalRule } from "react-icons/md";
 
  import TextTransition, { presets } from "react-text-transition";
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import Contact from './Contact';
 
 const TEXTS = [
   "Frontend Developer",
@@ -16,6 +17,16 @@ const Header = ( ) => {
   const location = useLocation()
  console.log(location);
   const [index, setIndex] =  useState(0);
+
+//modal toggle
+const openModal = () => {
+  // document.getElementById("toggleModal").classList.add("hidden");
+  document.getElementById("modal").classList.remove("hidden");
+};
+const closeModal = () => {
+  // document.getElementById("toggleModal").classList.remove("hidden");
+  document.getElementById("modal").classList.add("hidden");
+};
 
  useEffect(() => {
    const intervalId = setInterval(
@@ -82,6 +93,35 @@ const Header = ( ) => {
             </a>
           </ul>
         </div>
+        <div className="inline-flex">
+          <a
+            href="./resume.pdf"
+            target="_blank"
+            className="bg-lightish hover:bg-off border-  text-gray-800 font-bold py-2 px-4 rounded-l inline-flex items-center"
+            download={true}
+          >
+            <svg
+              className="fill-current w-4 h-4 mr-2"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+            </svg>
+            <span>Resume</span>
+          </a>
+
+          <a href='#contact'
+            id="toggleModal"
+         
+            className="hover:bg-off bg-lightish border-l-2 text-gray-800 font-bold py-2 px-4 rounded-r inline-flex gap-2 items-center"
+          >
+            <MdEmail size={"1.3em"} /> Lets Talk
+          </a>
+        </div>
+        {/* modal */}
+
+        
+
         <div className="flex max-w-sm items-center gap-5 my-4">
           <Link target="_blank" to={"https://github.com/nadiaS11"}>
             <FaGithub color="#E3CC8C" size={"2rem"} />
@@ -92,9 +132,8 @@ const Header = ( ) => {
           <Link target="_blank" to={"https://www.linkedin.com/in/nadia-ns11/"}>
             <FaLinkedinIn color="#E3CC8C" size={"2rem"} />
           </Link>
-          <Link>
-            <MdEmail color="#E3CC8C" size={"2rem"} />
-          </Link>
+
+          {/* modal */}
         </div>
       </div>
     );
