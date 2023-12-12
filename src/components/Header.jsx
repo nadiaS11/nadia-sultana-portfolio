@@ -25,7 +25,7 @@ const Header = ( ) => {
  }, []);
 
     return (
-      <div className="mx-auto max-w-screen-lg space-y-8">
+      <div className="mx-auto max-w-screen-lg space-y-8 lg:fixed lg:top-20 lg:left-48  ">
         <div>
           <h6 className=" text-lightish text-xl font-semibold">Hi, I am</h6>
           <h1 className="font-black leading-tight tracking-wider text-6xl text-off ">
