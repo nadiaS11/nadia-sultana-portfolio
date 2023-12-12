@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types'; 
  import { FaFacebookF, FaGithub,   FaLinkedinIn  } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdHorizontalRule } from "react-icons/md";
 
  import TextTransition, { presets } from "react-text-transition";
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const TEXTS = [
   "Frontend Developer",
@@ -13,7 +13,8 @@ const TEXTS = [
   "Web Developer",
 ];
 const Header = ( ) => {
-     
+  const location = useLocation()
+ console.log(location);
   const [index, setIndex] =  useState(0);
 
  useEffect(() => {
@@ -40,9 +41,47 @@ const Header = ( ) => {
           </h2>
         </div>
         <h4 className="max-w-lg text-lightish ">
-          I'm a frontend developer skilled in MERN Stack, handling both frontend
-          and backend for responsive websites and user-friendly interfaces.
+          I am a frontend developer skilled in MERN Stack, handling both
+          frontend and backend for responsive websites and user-friendly
+          interfaces.
         </h4>
+        <div>
+          <ul className="text-lightish font-semibold leading-tight list-none   ">
+            <a
+              href="#about"
+              className={`flex items-center hover:text-2xl ${
+                location.hash == "#about" ? "text-xl text-off" : ""
+              }`}
+            >
+              <span className=" ">
+                <MdHorizontalRule size={"2em"} />
+              </span>
+              <li>About</li>
+            </a>
+            <a
+              href="#skills"
+              className={`flex items-center hover:text-2xl ${
+                location.hash == "#skills" ? "text-xl text-off" : ""
+              }`}
+            >
+              <span className=" ">
+                <MdHorizontalRule size={"2em"} />
+              </span>
+              <li>Skills</li>
+            </a>
+            <a
+              href="#projects"
+              className={`flex items-center hover:text-2xl ${
+                location.hash == "#projects" ? "text-xl text-off" : ""
+              }`}
+            >
+              <span className=" ">
+                <MdHorizontalRule size={"2em"} />
+              </span>
+              <li>Projects</li>
+            </a>
+          </ul>
+        </div>
         <div className="flex max-w-sm items-center gap-5 my-4">
           <Link target="_blank" to={"https://github.com/nadiaS11"}>
             <FaGithub color="#E3CC8C" size={"2rem"} />

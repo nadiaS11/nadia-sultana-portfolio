@@ -7,7 +7,7 @@ import ProjectTwo from './ProjectTwo';
 import ProjectThree from './ProjectThree';
 const ProjectsSection = props => {
     return (
-      <div className="max-w-3xl">
+      <div id='projects' className="max-w-3xl">
         <h3 className="text-off font-medium text-xl mb-16">Projects</h3>
 
         <div className='flex flex-col gap-20'>

@@ -4,7 +4,7 @@ import ProfileImg from './ProfileImg';
 
 const About = props => {
     return (
-      <div className="max-w-3xl flex-grow">
+      <div id='about' className="max-w-3xl flex-grow">
         <h3 className="text-off font-medium text-xl mb-10 md:mb-5">About</h3>
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
           <p className="tracking-wider  max-w-lg">
