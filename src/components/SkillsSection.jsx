@@ -4,7 +4,7 @@ import SkillButton from './SkillButton';
 
 const SkillsSection = props => {
     return (
-      <div id='skills' className="max-w-3xl">
+      <div id='skills' className="  ">
         <h3 className="text-off font-medium text-xl mb-5">Skills</h3>
         <div className=" max-w-lg mb-10">
           <h3 className="pb-2 mb-5 border-lightish border-b-2  ">

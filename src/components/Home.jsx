@@ -8,7 +8,7 @@ import Contact from './Contact';
 
 const Home = props => {
     return (
-      <div className="text-dulche flex flex-col gap-20 my-32 lg:my-0">
+      <div className="text-dulche flex flex-col gap-20 my-32 lg:my-0 max-w-3xl mx-auto">
         <About />
 
         <SkillsSection />

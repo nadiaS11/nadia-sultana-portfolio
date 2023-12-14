@@ -37,7 +37,8 @@ const closeModal = () => {
  }, []);
 
     return (
-      <div className="mx-auto max-w-screen-lg space-y-8 lg:fixed lg:top-20 lg:left-48  ">
+      // <div className="mx-auto max-w-screen-lg space-y-8 xl:fixed xl:top-20 xl:left-48  ">
+      <div className="lg:w-full mx-auto max-w-screen-lg space-y-8 lg:sticky lg:top-20">
         <div>
           <h6 className=" text-lightish text-xl font-semibold">Hi, I am</h6>
           <h1 className="font-black leading-tight tracking-wider text-6xl text-off ">
@@ -110,17 +111,15 @@ const closeModal = () => {
             <span>Resume</span>
           </a>
 
-          <a href='#contact'
+          <a
+            href="#contact"
             id="toggleModal"
-         
             className="hover:bg-off bg-lightish border-l-2 text-gray-800 font-bold py-2 px-4 rounded-r inline-flex gap-2 items-center"
           >
             <MdEmail size={"1.3em"} /> Lets Talk
           </a>
         </div>
         {/* modal */}
-
-        
 
         <div className="flex max-w-sm items-center gap-5 my-4">
           <Link target="_blank" to={"https://github.com/nadiaS11"}>

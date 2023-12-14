@@ -4,9 +4,9 @@ import ProfileImg from './ProfileImg';
 
 const About = props => {
     return (
-      <div id='about' className="max-w-3xl flex-grow">
+      <div id='about' className="max-w-3xl  mx-auto">
         <h3 className="text-off font-medium text-xl mb-10 md:mb-5">About</h3>
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+        <div className="flex flex-col-reverse xl:flex-row items-center justify-between gap-10">
           <p className="tracking-wider  max-w-lg">
             Embarking on a coding journey during my teenage years, my
             fascination with programming languages and web development ignited.
